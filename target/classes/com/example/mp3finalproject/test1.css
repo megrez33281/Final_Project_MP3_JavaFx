@@ -1,0 +1,13 @@
+.slider .thumb {
+    -fx-pref-height: 20px;
+    -fx-pref-width: 10px;
+    -fx-background-color: linear-gradient(to top, royalblue, aquamarine);
+    -fx-background-radius: 5;
+}
+
+.slider .track {
+    -fx-background-color: linear-gradient(to left, cyan, magenta);
+    -fx-pref-height: 3px;
+    -fx-background-radius: 5
+}
+

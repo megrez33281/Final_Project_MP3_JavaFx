@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hbox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="897.0" spacing="5.0" style="-fx-background-color: transparent;" stylesheets="@test1.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mp3finalproject.HelloController">
+   <children>
+      <Pane prefHeight="564.0" prefWidth="322.0" style="-fx-background-color: black; -fx-background-radius: 25px;">
+         <children>
+            <ImageView fitHeight="341.0" fitWidth="241.0" layoutX="40.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MusicOn.png" />
+               </image>
+            </ImageView>
+            <HBox layoutX="90.0" layoutY="449.0" prefHeight="6.0" prefWidth="116.0" spacing="35.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" onMouseClicked="#Previous" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@PrevousSong.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="ImageState" fitHeight="25.0" fitWidth="20.0" onMouseClicked="#Start" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Playbutton.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" onMouseClicked="#Next" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@NextSong.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="238.0" layoutY="454.0" prefHeight="15.0" prefWidth="83.0" spacing="8.0">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Volume.png" />
+                     </image>
+                  </ImageView>
+                  <Slider fx:id="volumeBar" prefHeight="26.0" prefWidth="58.0" />
+               </children>
+            </HBox>
+            <VBox fx:id="Repeat" alignment="CENTER" layoutX="47.0" layoutY="450.0" prefHeight="16.0" prefWidth="20.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="14.0" fitWidth="20.0" onMouseClicked="#Repeat" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@repeat.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Circle fx:id="RepeatCircle" fill="WHITE" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+               </children>
+            </VBox>
+            <ImageView fx:id="playMode" fitHeight="14.0" fitWidth="20.0" layoutX="14.0" layoutY="456.0" onMouseClicked="#Random" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@takeTurn.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="SongName" alignment="TOP_CENTER" layoutX="5.0" layoutY="304.0" prefHeight="88.0" prefWidth="312.0" text="Song 1" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS" wrapText="true">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Slider fx:id="musicPlayBar" layoutX="6.0" layoutY="405.0" prefHeight="14.0" prefWidth="312.0" />
+            <Label fx:id="speedButton" layoutX="238.0" layoutY="484.0" onMousePressed="#setSpeed" prefHeight="27.0" prefWidth="51.0" text="1X" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="564.0" prefWidth="322.0" style="-fx-background-radius: 25;">
+         <children>
+            <Pane prefHeight="130.0" prefWidth="322.0" style="-fx-background-color: #C6BDD2; -fx-background-radius: 25 25 0 0;">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="110.0" layoutX="106.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@musicList.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="20.0" layoutX="288.0" layoutY="14.0" onMouseClicked="#Close" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@exit.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="add" fitHeight="26.0" fitWidth="20.0" layoutX="11.0" layoutY="98.0" onMouseClicked="#AddMusic" pickOnBounds="true" preserveRatio="true" rotate="45.0">
+                     <image>
+                        <Image url="@exit.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="delete" fitHeight="26.0" fitWidth="20.0" layoutX="41.0" layoutY="98.0" onMouseClicked="#three" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@deleteList.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label fx:id="deleteLabel" layoutX="4.0" layoutY="91.0" prefHeight="35.0" prefWidth="73.0" text="刪除歌曲" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="cancelButton" disable="true" layoutX="278.0" layoutY="106.0" mnemonicParsing="false" onAction="#deleteCancel" text="取消" visible="false" />
+                  <Button fx:id="sureButton" disable="true" layoutX="238.0" layoutY="106.0" mnemonicParsing="false" onAction="#deleteSure" text="確定" visible="false" />
+               </children>
+            </Pane>
+            <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutY="130.0" prefHeight="433.0" prefWidth="322.0" style="-fx-border-color: black; -fx-border-radius: 0 0 15 15; -fx-background-color: transparent;">
+               <content>
+                  <VBox fx:id="Scroll" alignment="TOP_CENTER" prefHeight="140.0" prefWidth="318.0" spacing="10.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</HBox>
